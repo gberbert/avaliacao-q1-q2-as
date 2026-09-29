@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTT DATA | Avaliação Executiva H1 FY26 - Application Services (AS)</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Avaliação Executiva de Desempenho H1 FY26 da Diretoria de Utilities & Energy para Application Services (AS) na NTT DATA Brasil. Resultados de EAPPS, MAPPS e QS, Inteligência Artificial, Turnaround Operacional, Governança e Visão 2027.">
+  <meta name="author" content="Gustavo Costa Berbert - Diretor de Application Services para Utilities & Energy Brasil">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <style>
+    :root {
+      /* NTT DATA Corporate Colors */
+      --ntt-navy: #001026;
+      --ntt-dark: #050d1a;
+      --ntt-blue: #0066cc;
+      --ntt-blue-light: #0072ce;
+      --ntt-blue-hover: #0056b3;
+      --ntt-cyan: #00c0f3;
+      --ntt-accent: #00e5ff;
+      --ntt-purple: #7928ca;
+      
+      /* Grayscale & Backgrounds */
+      --bg-white: #ffffff;
+      --bg-light: #f8fafc;
+      --bg-card: #ffffff;
+      --border-light: rgba(0, 0, 0, 0.08);
+      --border-glow: rgba(0, 102, 204, 0.25);
+      
+      /* Typography */
+      --text-dark: #0a1128;
+      --text-body: #475569;
+      --text-muted: #64748b;
+      --text-white: #ffffff;
+      
+      /* Semantic Status */
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --info: #0284c7;
+      
+      /* Foundation Accents */
+      --color-eapps: #0066cc;
+      --color-mapps: #00c0f3;
+      --color-qs: #10b981;
+      
+      /* Spacings & Shadows */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-soft: 0 10px 30px -5px rgba(0, 16, 38, 0.08), 0 4px 6px -2px rgba(0, 16, 38, 0.03);
+      --shadow-hover: 0 20px 40px -10px rgba(0, 102, 204, 0.15), 0 8px 16px -4px rgba(0, 102, 204, 0.08);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-white);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* --- NTT DATA Header (Reference Standard) --- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: var(--ntt-navy);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .app-logo-img {
+      height: 36px;
+      width: 36px;
+      border-radius: 7px;
+      object-fit: contain;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(0, 102, 204, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .app-logo-img:hover {
+      transform: scale(1.08);
+    }
+
+    .brand-ntt-text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand-badge {
+      background: linear-gradient(135deg, rgba(0, 192, 243, 0.2), rgba(0, 102, 204, 0.25));
+      border: 1px solid var(--ntt-cyan);
+      color: var(--ntt-cyan);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: var(--transition);
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-header {
+      background: linear-gradient(135deg, var(--ntt-blue), var(--ntt-blue-light));
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-header:hover {
+      box-shadow: 0 0 15px rgba(0, 192, 243, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-header {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .btn-outline-header:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
+    }
+
+    .btn-drawer-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero-section {
+      background: linear-gradient(180deg, var(--ntt-navy) 0%, #03142e 60%, #071e3d 100%);
+      color: var(--text-white);
+      padding: 70px 0 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0, 192, 243, 0.15) 0%, rgba(0, 102, 204, 0.05) 50%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 192, 243, 0.15);
+      border: 1px solid rgba(0, 192, 243, 0.4);
+      color: var(--ntt-cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-title {
+      font-size: 2.7rem;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #ffffff;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #ffffff 40%, var(--ntt-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 35px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--ntt-blue), var(--ntt-cyan));
+      color: #ffffff;
+      padding: 13px 26px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 192, 243, 0.5);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: white;
+    }
+
+    /* Hero Metrics Bar */
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .hero-stat-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+
+    .hero-stat-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--ntt-cyan);
+      transform: translateY(-3px);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .stat-sub {
+      font-size: 0.75rem;
+      color: var(--ntt-cyan);
+      font-weight: 500;
+    }
+
+    /* Hero Media Visual */
+    .hero-visual-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #020b18;
+    }
+
+    .hero-visual-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-visual-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-visual-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(0deg, rgba(0, 16, 38, 0.95) 0%, rgba(0, 16, 38, 0.7) 60%, transparent 100%);
+    }
+
+    .hero-badge-tag {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid var(--success);
+      color: #34d399;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .hero-visual-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .hero-visual-desc {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+
+    /* --- SECTION COMMON --- */
+    section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ntt-blue);
+      background: rgba(0, 102, 204, 0.1);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* --- PILLARS / EXECUTIVE HIGHLIGHTS --- */
+    .section-pillars {
+      background: var(--bg-light);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .pillar-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-glow);
+    }
+
+    .pillar-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 192, 243, 0.15));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--ntt-blue);
+      margin-bottom: 18px;
+    }
+
+    .pillar-card.eapps .pillar-icon-box { background: rgba(0, 102, 204, 0.12); color: var(--ntt-blue); }
+    .pillar-card.mapps .pillar-icon-box { background: rgba(0, 192, 243, 0.15); color: #0284c7; }
+    .pillar-card.qs .pillar-icon-box { background: rgba(16, 185, 129, 0.15); color: var(--success); }
+    .pillar-card.gov .pillar-icon-box { background: rgba(121, 40, 202, 0.12); color: var(--ntt-purple); }
+
+    .pillar-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .pillar-desc {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .pillar-badge {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    /* --- THE 3 FOUNDATIONS SPOTLIGHT --- */
+    .foundations-showcase {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 30px;
+    }
+
+    .foundation-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .foundation-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+    }
+
+    .foundation-card.eapps::before { background: var(--color-eapps); }
+    .foundation-card.mapps::before { background: var(--color-mapps); }
+    .foundation-card.qs::before { background: var(--color-qs); }
+
+    .foundation-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .f-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .f-name {
+      font-size: 1.4rem;
+      color: var(--text-dark);
+      font-weight: 800;
+    }
+
+    .f-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .f-badge.eapps { background: rgba(0, 102, 204, 0.1); color: var(--ntt-blue); border: 1px solid rgba(0, 102, 204, 0.2); }
+    .f-badge.mapps { background: rgba(0, 192, 243, 0.12); color: #0284c7; border: 1px solid rgba(0, 192, 243, 0.3); }
+    .f-badge.qs { background: rgba(16, 185, 129, 0.12); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    .f-lead {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .f-lead-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ntt-navy);
+    }
+
+    .f-lead-info strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .f-lead-info span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .f-numbers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 22px;
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+    }
+
+    .f-number-box .label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .f-number-box .val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .f-number-box .val.margin-good { color: var(--success); }
+
+    .f-bullets {
+      list-style: none;
+    }
+
+    .f-bullet-item {
+      display: flex;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .f-bullet-item span.icon {
+      color: var(--ntt-blue);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* --- AUDIO / TESTIMONIAL SPOTLIGHT --- */
+    .testimonial-banner {
+      background: linear-gradient(135deg, #021226, #06234d);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      color: white;
+      margin: 40px 0;
+      box-shadow: 0 15px 35px rgba(0, 16, 38, 0.25);
+      border: 1px solid rgba(0, 192, 243, 0.3);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .test-audio-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ntt-blue), var(--ntt-cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: white;
+      box-shadow: 0 0 20px rgba(0, 192, 243, 0.4);
+      flex-shrink: 0;
+    }
+
+    .test-content h4 {
+      font-size: 1.25rem;
+      color: var(--ntt-cyan);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .test-quote {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 12px;
+    }
+
+    .test-author {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      gap: 16px;
+    }
+
+    .test-author strong {
+      color: #ffffff;
+    }
+
+    /* --- FINANCIAL TABLE & DRE SECTION --- */
+    .finance-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 35px;
+    }
+
+    .finance-stat-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .finance-stat-card.success-border {
+      border-left: 4px solid var(--success);
+    }
+
+    .finance-stat-card.blue-border {
+      border-left: 4px solid var(--ntt-blue);
+    }
+
+    .finance-stat-card.cyan-border {
+      border-left: 4px solid var(--ntt-cyan);
+    }
+
+    .finance-stat-card.purple-border {
+      border-left: 4px solid var(--ntt-purple);
+    }
+
+    .fsc-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .fsc-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .fsc-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-top: 4px;
+    }
+
+    .badge-green { background: #dcfce7; color: #166534; }
+    .badge-blue { background: #e0f2fe; color: #0369a1; }
+    .badge-amber { background: #fef3c7; color: #92400e; }
+
+    /* Tables */
+    .table-container {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      overflow-x: auto;
+      margin-bottom: 35px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 700;
+      padding: 14px 18px;
+      border-bottom: 2px solid #e2e8f0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .data-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid #f1f5f9;
+      color: var(--text-body);
+    }
+
+    .data-table tr:hover {
+      background: #f8fafc;
+    }
+
+    .data-table tfoot tr {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .data-table tfoot td {
+      border-top: 2px solid #cbd5e1;
+      border-bottom: none;
+    }
+
+    /* Charts Grid */
+    .charts-grid-2 {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .chart-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .chart-header {
+      margin-bottom: 18px;
+    }
+
+    .chart-title {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    .chart-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .chart-canvas-wrap {
+      position: relative;
+      width: 100%;
+      height: 280px;
+    }
+
+    /* --- CLIENTS SECTION --- */
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .client-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .client-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-glow);
+    }
+
+    .client-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .client-card-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .client-rev {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--ntt-blue);
+      margin-bottom: 4px;
+    }
+
+    .client-margin-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .client-desc {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      line-height: 1.5;
+      flex-grow: 1;
+      margin-bottom: 14px;
+    }
+
+    .client-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .client-pill {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    /* --- AI & INNOVATION SHOWCASE --- */
+    .section-ai {
+      background: linear-gradient(180deg, #021226 0%, #031c3d 100%);
+      color: white;
+    }
+
+    .section-ai .section-title {
+      color: white;
+    }
+
+    .section-ai .section-subtitle {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .ai-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .ai-case-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ai-case-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--ntt-cyan);
+      transform: translateY(-5px);
+    }
+
+    .ai-badge {
+      background: rgba(0, 192, 243, 0.2);
+      border: 1px solid var(--ntt-cyan);
+      color: var(--ntt-cyan);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      align-self: flex-start;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .ai-case-title {
+      font-size: 1.25rem;
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .ai-case-desc {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .ai-metric-highlight {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      border-left: 3px solid var(--ntt-cyan);
+    }
+
+    .ai-metric-highlight strong {
+      color: var(--ntt-cyan);
+      font-size: 1.1rem;
+      display: block;
+    }
+
+    .ai-metric-highlight span {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* --- LEADERSHIP TEAM GRID --- */
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .leader-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 26px 20px;
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .leader-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-glow);
+    }
+
+    .leader-photo {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ntt-navy), var(--ntt-blue));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin: 0 auto 16px auto;
+      border: 3px solid #e0f2fe;
+      box-shadow: 0 4px 10px rgba(0, 102, 204, 0.15);
+    }
+
+    .leader-name {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .leader-role {
+      font-size: 0.78rem;
+      color: var(--ntt-blue);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .leader-bio {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+
+    /* --- PIPELINE SECTION --- */
+    .pipe-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    /* --- ACCORDION FAQ --- */
+    .faq-container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-glow);
+    }
+
+    .faq-header {
+      padding: 18px 22px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      user-select: none;
+    }
+
+    .faq-header:hover {
+      background: #f8fafc;
+    }
+
+    .faq-icon {
+      font-size: 0.85rem;
+      color: var(--ntt-blue);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-body {
+      padding: 0 22px 20px 22px;
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      display: none;
+      border-top: 1px solid #f1f5f9;
+      background: #fafafa;
+    }
+
+    .faq-item.active .faq-body {
+      display: block;
+    }
+
+    /* --- PRESENTER TRAY MODAL --- */
+    .presenter-tray-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: linear-gradient(135deg, var(--ntt-navy), #06234d);
+      color: white;
+      border: 1px solid var(--ntt-cyan);
+      box-shadow: 0 10px 30px rgba(0, 16, 38, 0.4);
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+    }
+
+    .presenter-tray-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 192, 243, 0.6);
+    }
+
+    .tray-modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 16, 38, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .tray-modal-backdrop.open {
+      display: flex;
+    }
+
+    .tray-modal-window {
+      background: #061833;
+      border: 1px solid rgba(0, 192, 243, 0.4);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 900px;
+      max-height: 88vh;
+      overflow-y: auto;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 32px;
+      position: relative;
+    }
+
+    .tray-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 16px;
+    }
+
+    .tray-modal-header h3 {
+      font-size: 1.4rem;
+      color: white;
+    }
+
+    .tray-modal-close {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .tray-modal-close:hover {
+      color: white;
+    }
+
+    /* --- FOOTER (Standard NTT DATA) --- */
+    .site-footer {
+      background: var(--ntt-navy);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 60px 0 30px 0;
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand strong {
+      color: white;
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-title {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--ntt-cyan);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual-card { order: -1; max-width: 600px; margin: 0 auto; }
+      .pillars-grid, .foundations-showcase, .clients-grid, .leaders-grid, .pipe-cards-grid, .hero-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .charts-grid-2 { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .pillars-grid, .foundations-showcase, .clients-grid, .leaders-grid, .pipe-cards-grid, .hero-stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .site-nav { display: none; }
+      .btn-drawer-toggle { display: block; }
+      .hero-title { font-size: 2rem; }
+      .testimonial-banner { grid-template-columns: 1fr; text-align: center; }
+      .test-audio-icon { margin: 0 auto; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Print Styles */
+    @media print {
+      .site-header, .presenter-tray-btn, .btn-primary, .btn-secondary, .hero-actions { display: none !important; }
+      body { background: white !important; color: black !important; }
+      .hero-section { background: white !important; color: black !important; padding: 20px 0 !important; }
+      .hero-title, .hero-title span { color: black !important; -webkit-text-fill-color: black !important; }
+      .hero-stat-card { border: 1px solid #ccc !important; color: black !important; }
+      .stat-val, .stat-label { color: black !important; }
+      section { padding: 30px 0 !important; page-break-inside: avoid; }
+      .section-ai { background: white !important; color: black !important; }
+      .section-ai * { color: black !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER (NTT DATA STANDARD) ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-logo-wrap" title="NTT DATA - Application Services">
+        <img src="logo.png" alt="NTT DATA" class="app-logo-img">
+        <span class="brand-ntt-text">NTT DATA</span>
+        <span class="brand-badge">Application Services • H1</span>
+      </a>
+
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="#overview" class="nav-link">Visão Geral</a></li>
+          <li><a href="#foundations" class="nav-link">3 Foundations</a></li>
+          <li><a href="#financeiro" class="nav-link">Financeiro H1</a></li>
+          <li><a href="#clientes" class="nav-link">Clientes</a></li>
+          <li><a href="#inovacao" class="nav-link">IA & Inovação</a></li>
+          <li><a href="#lideranca" class="nav-link">Liderança</a></li>
+          <li><a href="#pipeline" class="nav-link">Pipeline 2027</a></li>
+          <li><a href="#faq" class="nav-link">FAQ Executivo</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-outline-header" onclick="window.print()" title="Imprimir ou Salvar PDF">
+          🖨️ PDF
+        </button>
+        <button class="btn-header" id="btn-open-tray-header" title="Abrir Autoavaliação do Diretor">
+          📝 Autoavaliação
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-tag">
+            <span>⚡</span> Prestação de Contas Executiva • H1 FY26 (Abril a Setembro)
+          </div>
+          <h1 class="hero-title">
+            Application Services: <span>Eficiência com IA, Turnaround Operacional e Governança</span>
+          </h1>
+          <p class="hero-subtitle">
+            Sob a liderança do Diretor <strong>Gustavo Costa Berbert</strong>, consolidamos a governança unificada das três foundations — <strong>EAPPS (Eficiência)</strong>, <strong>MAPPS (Modernização)</strong> e <strong>QS (Qualidade)</strong> — revertendo desafios operacionais críticos, recuperando o relacionamento com a CPFL, estabilizando a sustentação EDP e estabelecendo pioneirismo nacional na aplicação de IA em sistemas legados e SAP.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#foundations" class="btn-primary">
+              <span>Explorar as 3 Foundations</span> ➔
+            </a>
+            <a href="#financeiro" class="btn-secondary">
+              Ver DRE Auditado Consolidado
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-stats-grid">
+            <div class="hero-stat-card">
+              <div class="stat-label">Receita Bruta H1</div>
+              <div class="stat-val">R$ 23,4M</div>
+              <div class="stat-sub">83,7% Já Faturado</div>
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="stat-label">Margem de Contribuição</div>
+              <div class="stat-val">28,32%</div>
+              <div class="stat-sub">R$ 6,63 M em CM</div>
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="stat-label">3 Foundations</div>
+              <div class="stat-val">EAPPS • MAPPS • QS</div>
+              <div class="stat-sub">Operação 100% Integrada</div>
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="stat-label">Pipeline Ativo H2</div>
+              <div class="stat-val">R$ 39,3M</div>
+              <div class="stat-sub">R$ 20,5M Ponderado</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-card">
+            <img src="assets/as_ai_orchestration.jpg" alt="Centro de Operações de Application Services NTT DATA">
+            <div class="hero-visual-overlay">
+              <span class="hero-badge-tag">IA & Governança em Produção</span>
+              <h3 class="hero-visual-title">Operação de Application Services</h3>
+              <p class="hero-visual-desc">
+                Orquestração integrada de sustentação de missão crítica, modernização cloud e automação de qualidade para o setor de Utilities & Energy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OS 4 PILARES DA GESTÃO ==================== -->
+  <section class="section-pillars" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Racional Estratégico</span>
+        <h2 class="section-title">Os 4 Pilares da Gestão de Application Services</h2>
+        <p class="section-subtitle">
+          Como navegamos um semestre complexo de transição e reestruturações, transformando desafios herdados em alavancas de eficiência e credibilidade junto aos clientes.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card eapps">
+          <div class="pillar-icon-box">🔄</div>
+          <h3 class="pillar-title">1. Turnaround & Recuperação de Contas</h3>
+          <p class="pillar-desc">
+            Assumimos EAPPS em Dezembro/25 em cenário crítico. Focamos na estabilização do relacionamento com nosso maior cliente (CPFL), superação de ruídos históricos na EDP (contrato global Portugal e transição OutSystems) e controle operacional rígido.
+          </p>
+          <span class="pillar-badge">Evolução em EAPPS</span>
+        </div>
+
+        <div class="pillar-card mapps">
+          <div class="pillar-icon-box">⚡</div>
+          <h3 class="pillar-title">2. Vanguarda em IA Operacional</h3>
+          <p class="pillar-desc">
+            Pioneiros no Brasil em imersão de IA para sustentação: criamos o framework para processos Brownfields (documentação de legados em EAPPS), framework 100% automatizado de QA para SAP (até 70% de eficiência em QS) e entrega antecipada no contingência CPFL (MAPPS).
+          </p>
+          <span class="pillar-badge">IA em Produção</span>
+        </div>
+
+        <div class="pillar-card qs">
+          <div class="pillar-icon-box">👥</div>
+          <h3 class="pillar-title">3. Reorganização Estratégica da Equipe</h3>
+          <p class="pillar-desc">
+            Designação de executivos sêniores por especialidade: <strong>William Amaral</strong> em MAPPS, <strong>Daniella Cergole</strong> como líder cross/estratégica e sustentações (EDP/ENEVA/Aegea), <strong>Renato Honório</strong> dedicado à CPFL e <strong>Adilson Ferreira</strong> em QS.
+          </p>
+          <span class="pillar-badge">Liderança Especializada</span>
+        </div>
+
+        <div class="pillar-card gov">
+          <div class="pillar-icon-box">📊</div>
+          <h3 class="pillar-title">4. Formação de Líderes-Gestores</h3>
+          <p class="pillar-desc">
+            Capacitação contínua dos coordenadores e líderes técnicos para atuação 100% executiva: domínio do SAP, GECO, Físico-Financeiro no MS Project, elaboração de estimativas precisas e defesa inegociável da rentabilidade.
+          </p>
+          <span class="pillar-badge">Governança & GECO</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AS 3 FOUNDATIONS ==================== -->
+  <section id="foundations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfólio de Soluções</span>
+        <h2 class="section-title">As Três Foundations de Application Services</h2>
+        <p class="section-subtitle">
+          Um modelo de entrega sinérgico onde Eficiência Operacional (EAPPS), Modernização Ágil (MAPPS) e Garantia da Qualidade (QS) atuam de ponta a ponta nas maiores concessionárias do Brasil.
+        </p>
+      </div>
+
+      <div class="foundations-showcase">
+        <!-- EAPPS -->
+        <div class="foundation-card eapps">
+          <div class="f-header">
+            <h3 class="f-name">EAPPS</h3>
+            <span class="f-badge eapps">Efficiency Applications</span>
+          </div>
+
+          <div class="f-lead">
+            <div class="f-lead-avatar">DC</div>
+            <div class="f-lead-info">
+              <strong>Daniella Cergole & Renato Honório</strong>
+              <span>Estratégia Setorial • EDP, ENEVA, Aegea e CPFL Dedicado</span>
+            </div>
+          </div>
+
+          <div class="f-numbers-grid">
+            <div class="f-number-box">
+              <span class="label">Receita H1</span>
+              <div class="val">R$ 12,52M</div>
+            </div>
+            <div class="f-number-box">
+              <span class="label">Margem CM</span>
+              <div class="val">24,95%</div>
+            </div>
+          </div>
+
+          <ul class="f-bullets">
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Maior volume de AS (53,5%):</strong> Sustentação contínua de missão crítica (AMS) nos maiores clusters de energia.</span>
+            </li>
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>IA em Processos Brownfield:</strong> Automação pioneira de documentação e engenharia reversa de sistemas legados.</span>
+            </li>
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Estabilização EDP & CPFL:</strong> Reestruturação da governança operacional e financeira com o cliente.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MAPPS -->
+        <div class="foundation-card mapps">
+          <div class="f-header">
+            <h3 class="f-name">MAPPS</h3>
+            <span class="f-badge mapps">Modern Applications</span>
+          </div>
+
+          <div class="f-lead">
+            <div class="f-lead-avatar">WA</div>
+            <div class="f-lead-info">
+              <strong>William Amaral Silva</strong>
+              <span>Executivo Responsável MAPPS Utilities</span>
+            </div>
+          </div>
+
+          <div class="f-numbers-grid">
+            <div class="f-number-box">
+              <span class="label">Receita H1</span>
+              <div class="val">R$ 5,78M</div>
+            </div>
+            <div class="f-number-box">
+              <span class="label">Margem CM</span>
+              <div class="val margin-good">30,80%</div>
+            </div>
+          </div>
+
+          <ul class="f-bullets">
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Rentabilidade Superior:</strong> Margem de 30,80% batendo os targets corporativos com disciplina financeira estrita.</span>
+            </li>
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Case Ouro CPFL Contingência:</strong> Sistema entregue antecipadamente para apoiar a migração SAP com margem de 32,3%.</span>
+            </li>
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Superação de Desvio Setorial:</strong> Compensação do adiamento da abertura de mercado para 2027 com framework de IA.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- QS -->
+        <div class="foundation-card qs">
+          <div class="f-header">
+            <h3 class="f-name">QS</h3>
+            <span class="f-badge qs">Quality Services</span>
+          </div>
+
+          <div class="f-lead">
+            <div class="f-lead-avatar">AF</div>
+            <div class="f-lead-info">
+              <strong>Adilson Ferreira</strong>
+              <span>Executivo Responsável QS Utilities</span>
+            </div>
+          </div>
+
+          <div class="f-numbers-grid">
+            <div class="f-number-box">
+              <span class="label">Receita H1</span>
+              <div class="val">R$ 5,09M</div>
+            </div>
+            <div class="f-number-box">
+              <span class="label">Margem CM</span>
+              <div class="val margin-good">33,82%</div>
+            </div>
+          </div>
+
+          <ul class="f-bullets">
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Alta Rentabilidade (33,82%):</strong> Margem consistente em clientes como Equatorial, Ultragaz, Neoenergia e Enel.</span>
+            </li>
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Framework de IA para SAP QA:</strong> Testes automatizados com até 70% de ganho de eficiência, apresentado a 4 COs.</span>
+            </li>
+            <li class="f-bullet-item">
+              <span class="icon">✓</span>
+              <span><strong>Apoio ao Projeto Siens (CPFL):</strong> Homologação de excelência reconhecida formalmente pelo cliente.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Testimonial Callout Banner -->
+      <div class="testimonial-banner">
+        <div class="test-audio-icon">🎙️</div>
+        <div class="test-content">
+          <h4>
+            <span>Reconhecimento Formal do Cliente • CPFL Energia</span>
+            <span style="font-size: 0.75rem; background: rgba(0, 192, 243, 0.2); color: var(--ntt-cyan); padding: 2px 8px; border-radius: 4px;">Áudio Registrado</span>
+          </h4>
+          <p class="test-quote">
+            "Cara, é assim mesmo: a gente precisa continuar exatamente dessa forma! A atuação de vocês na sustentação e no projeto de contingência tem sido excepcional."
+          </p>
+          <div class="test-author">
+            <span><strong>Rodrigo Relvas</strong> • Liderança de Sustentação CPFL</span>
+            <span>Reflexo direto da recuperação da confiança da conta sob a gestão de AS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESULTADOS FINANCEIROS AUDITADOS ==================== -->
+  <section class="section-pillars" id="financeiro">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Performance Consolidada H1</span>
+        <h2 class="section-title">Demonstrativo Financeiro de Application Services</h2>
+        <p class="section-subtitle">
+          Dados extraídos dos sistemas oficiais de gestão e DRE corporativo (Abril a Setembro de 2026).
+        </p>
+      </div>
+
+      <!-- Finance Stat Cards -->
+      <div class="finance-strip-grid">
+        <div class="finance-stat-card blue-border">
+          <div class="fsc-label">Receita Bruta Total</div>
+          <div class="fsc-value">R$ 23,40 M</div>
+          <span class="fsc-badge badge-blue">R$ 19,58M Realizado</span>
+        </div>
+
+        <div class="finance-stat-card success-border">
+          <div class="fsc-label">Margem CM Consolidada</div>
+          <div class="fsc-value">28,32%</div>
+          <span class="fsc-badge badge-green">R$ 6,63 M em CM</span>
+        </div>
+
+        <div class="finance-stat-card cyan-border">
+          <div class="fsc-label">Custos Operacionais</div>
+          <div class="fsc-value">R$ 14,81 M</div>
+          <span class="fsc-badge badge-blue">Disciplinados via GECO</span>
+        </div>
+
+        <div class="finance-stat-card purple-border">
+          <div class="fsc-label">Pipeline H2 Ponderado</div>
+          <div class="fsc-value">R$ 20,50 M</div>
+          <span class="fsc-badge badge-green">Total H2: R$ 39,25M</span>
+        </div>
+      </div>
+
+      <!-- Table: Breakdown by Foundation -->
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Foundation</th>
+              <th>Liderança Executiva</th>
+              <th>Receita Bruta H1</th>
+              <th>Custos H1</th>
+              <th>Margem CM (R$)</th>
+              <th>Margem CM (%)</th>
+              <th>Q1 (Abr-Jun)</th>
+              <th>Q2 (Jul-Set)</th>
+              <th>% Share AS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>EAPPS</strong> (Efficiency Applications)</td>
+              <td>Daniella Cergole / Renato Honório</td>
+              <td><strong>R$ 12.524.977</strong></td>
+              <td>R$ 8.262.596</td>
+              <td>R$ 3.124.460</td>
+              <td><span class="fsc-badge badge-blue">24,95%</span></td>
+              <td>R$ 6.408.312</td>
+              <td>R$ 6.116.665</td>
+              <td>53,53%</td>
+            </tr>
+            <tr>
+              <td><strong>MAPPS</strong> (Modern Applications)</td>
+              <td>William Amaral Silva</td>
+              <td><strong>R$ 5.779.444</strong></td>
+              <td>R$ 3.791.190</td>
+              <td>R$ 1.780.315</td>
+              <td><span class="fsc-badge badge-green">30,80%</span></td>
+              <td>R$ 3.228.937</td>
+              <td>R$ 2.550.507</td>
+              <td>24,70%</td>
+            </tr>
+            <tr>
+              <td><strong>QS</strong> (Quality Services)</td>
+              <td>Adilson Ferreira</td>
+              <td><strong>R$ 5.093.473</strong></td>
+              <td>R$ 2.759.782</td>
+              <td>R$ 1.722.474</td>
+              <td><span class="fsc-badge badge-green">33,82%</span></td>
+              <td>R$ 2.609.973</td>
+              <td>R$ 2.483.500</td>
+              <td>21,77%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2"><strong>TOTAL APPLICATION SERVICES (AS)</strong></td>
+              <td><strong>R$ 23.397.895</strong></td>
+              <td><strong>R$ 14.813.568</strong></td>
+              <td><strong>R$ 6.627.250</strong></td>
+              <td><strong>28,32%</strong></td>
+              <td><strong>R$ 12.247.222</strong></td>
+              <td><strong>R$ 11.150.672</strong></td>
+              <td><strong>100,0%</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-grid-2">
+        <div class="chart-card">
+          <div class="chart-header">
+            <h4 class="chart-title">Receita Bruta vs. Custos e Margem CM por Foundation</h4>
+            <span class="chart-subtitle">Valores consolidados em Milhões de Reais (H1 FY26)</span>
+          </div>
+          <div class="chart-canvas-wrap">
+            <canvas id="chartFoundations"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <h4 class="chart-title">Distribuição de Receita por Foundation (Share %)</h4>
+            <span class="chart-subtitle">Representatividade relativa no portfólio AS</span>
+          </div>
+          <div class="chart-canvas-wrap">
+            <canvas id="chartShare"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card" style="margin-bottom: 20px;">
+        <div class="chart-header">
+          <h4 class="chart-title">Evolução Mensal da Receita e Margem CM % (H1 FY26)</h4>
+          <span class="chart-subtitle">Trajetória mês a mês de Abril a Setembro</span>
+        </div>
+        <div class="chart-canvas-wrap" style="height: 250px;">
+          <canvas id="chartMonthly"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RAIO-X POR CLIENTE ==================== -->
+  <section id="clientes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Análise de Carteira</span>
+        <h2 class="section-title">Desempenho e Presença por Cliente</h2>
+        <p class="section-subtitle">
+          Atuação multi-foundation nos maiores grupos de Utilities e Energia, combinando grandes âncoras de sustentação e projetos de alta rentabilidade.
+        </p>
+      </div>
+
+      <div class="clients-grid">
+        <!-- CPFL -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">CPFL</h4>
+            <span class="client-pill" style="background:#e0f2fe; color:#0369a1;">58,6% de AS</span>
+          </div>
+          <div class="client-rev">R$ 13,71 M</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--ntt-blue);">25,87% (R$ 3,55M)</strong>
+          </div>
+          <p class="client-desc">
+            Principal conta do setor. Foco bem-sucedido na recuperação de confiança do cliente, com destaque para a liderança de Renato Honório em EAPPS, elogios explícitos da TI (áudio Rodrigo Relvas) e projeto de contingência SAP em MAPPS.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">EAPPS: R$ 9,3M</span>
+            <span class="client-pill">QS: R$ 2,2M</span>
+            <span class="client-pill">MAPPS: R$ 2,2M</span>
+          </div>
+        </div>
+
+        <!-- Neoenergia -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">Neoenergia</h4>
+            <span class="client-pill" style="background:#dcfce7; color:#166534;">19,8% de AS</span>
+          </div>
+          <div class="client-rev">R$ 4,63 M</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--success);">34,03% (R$ 1,57M)</strong>
+          </div>
+          <p class="client-desc">
+            Conta de alta rentabilidade gerida com rigor por William Amaral. Sucesso na retomada do contrato Nutanix, expansão de demandas de desenvolvimento e homologações de qualidade em QS.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">MAPPS: R$ 3,0M</span>
+            <span class="client-pill">EAPPS: R$ 1,1M</span>
+            <span class="client-pill">QS: R$ 0,5M</span>
+          </div>
+        </div>
+
+        <!-- Ultragaz -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">Ultragaz</h4>
+            <span class="client-pill" style="background:#f1f5f9; color:#475569;">5,9% de AS</span>
+          </div>
+          <div class="client-rev">R$ 1,38 M</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--success);">33,53% (R$ 461k)</strong>
+          </div>
+          <p class="client-desc">
+            Operação consolidada em Quality Services (QS) sob comando de Adilson Ferreira, com excelência na execução de ciclos mensais de testes com alta rentabilidade.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">QS: 100%</span>
+            <span class="client-pill">Margem Alta</span>
+          </div>
+        </div>
+
+        <!-- Aegea -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">Aegea</h4>
+            <span class="client-pill" style="background:#f1f5f9; color:#475569;">5,1% de AS</span>
+          </div>
+          <div class="client-rev">R$ 1,20 M</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--ntt-blue);">29,38% (R$ 351k)</strong>
+          </div>
+          <p class="client-desc">
+            Diversificação estratégica no setor de saneamento. Sustentação de aplicações em EAPPS liderada por Daniella Cergole com margem saudável e expansão contínua.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">EAPPS: R$ 1,03M</span>
+            <span class="client-pill">MAPPS: R$ 163k</span>
+          </div>
+        </div>
+
+        <!-- Equatorial -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">Equatorial</h4>
+            <span class="client-pill" style="background:#dcfce7; color:#166534;">3,9% de AS</span>
+          </div>
+          <div class="client-rev">R$ 909 K</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--success);">34,52% (R$ 314k)</strong>
+          </div>
+          <p class="client-desc">
+            Destaque absoluto em Quality Services: trabalho elogiadíssimo em governança de QA e automação de testes com margem de 34,5%, servindo de credencial para novos contratos.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">QS: R$ 603k</span>
+            <span class="client-pill">EAPPS: R$ 306k</span>
+          </div>
+        </div>
+
+        <!-- Enel -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">Enel</h4>
+            <span class="client-pill" style="background:#dcfce7; color:#166534;">2,8% de AS</span>
+          </div>
+          <div class="client-rev">R$ 660 K</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--success);">33,88% (R$ 224k)</strong>
+          </div>
+          <p class="client-desc">
+            Presença multi-foundation com forte rentabilidade: monitoração Dynatrace (MAPPS), testes de acessibilidade e regressivos SAP S/4HANA (QS) com margem média próxima a 34%.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">QS: R$ 310k</span>
+            <span class="client-pill">MAPPS: R$ 186k</span>
+            <span class="client-pill">EAPPS: R$ 164k</span>
+          </div>
+        </div>
+
+        <!-- ENEVA -->
+        <div class="client-card">
+          <div class="client-card-top">
+            <h4 class="client-card-title">ENEVA</h4>
+            <span class="client-pill" style="background:#f1f5f9; color:#475569;">2,6% de AS</span>
+          </div>
+          <div class="client-rev">R$ 606 K</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--ntt-blue);">29,19% (R$ 177k)</strong>
+          </div>
+          <p class="client-desc">
+            Sustentação AMS de sistemas legados e engenharia operada por EAPPS sob gestão de Daniella Cergole, assegurando previsibilidade de longo prazo.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">EAPPS: 100%</span>
+            <span class="client-pill">Contrato Longo Prazo</span>
+          </div>
+        </div>
+
+        <!-- EDP -->
+        <div class="client-card" style="border-left: 4px solid var(--warning);">
+          <div class="client-card-top">
+            <h4 class="client-card-title">EDP</h4>
+            <span class="client-pill" style="background:#fef3c7; color:#92400e;">Turnaround</span>
+          </div>
+          <div class="client-rev">R$ 316 K</div>
+          <div class="client-margin-row">
+            <span>Margem CM:</span>
+            <strong style="color:var(--danger);">-6,30% (Reestruturado)</strong>
+          </div>
+          <p class="client-desc">
+            Conta complexa decorrente de contrato global Portugal, perda de executivo de OutSystems (saída do Formiga) e limitações de processos da EDP. Agora <strong>100% estabilizada e sob controle</strong> da liderança de Daniella Cergole.
+          </p>
+          <div class="client-tags">
+            <span class="client-pill">MAPPS: R$ 284k</span>
+            <span class="client-pill">QS: R$ 32k</span>
+            <span class="client-pill">Em Normalização</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== IA & INOVAÇÃO OPERACIONAL ==================== -->
+  <section class="section-ai" id="inovacao">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background:rgba(0,192,243,0.2); color:var(--ntt-cyan);">Vanguarda Tecnológica</span>
+        <h2 class="section-title">Inteligência Artificial Operacional em Todas as Frentes</h2>
+        <p class="section-subtitle">
+          Fomos um dos primeiros no Brasil a aplicar imersão de IA diretamente em equipes de sustentação e qualidade, transformando operações legadas em esteiras de alta eficiência.
+        </p>
+      </div>
+
+      <div class="ai-cases-grid">
+        <!-- Case 1: EAPPS Brownfield -->
+        <div class="ai-case-card">
+          <span class="ai-badge">EAPPS • Sustentação</span>
+          <h3 class="ai-case-title">Framework de IA para Processos Brownfield & Legados</h3>
+          <p class="ai-case-desc">
+            Desenvolvido para sustentações complexas (EDP, ENEVA, Aegea e CPFL). Utiliza modelos de IA generativa para realizar engenharia reversa de código antigo, gerar documentação técnica automatizada e acelerar o diagnóstico de chamados.
+          </p>
+          <div class="ai-metric-highlight">
+            <strong>-40% no Tempo de Onboarding</strong>
+            <span>Geração automática de documentação e mapeamento de código legado.</span>
+          </div>
+        </div>
+
+        <!-- Case 2: QS SAP QA -->
+        <div class="ai-case-card">
+          <span class="ai-badge">QS • Quality Services</span>
+          <h3 class="ai-case-title">Framework de QA para SAP 100% Automatizado com IA</h3>
+          <p class="ai-case-desc">
+            Inovação liderada por Adilson Ferreira para testes de migração e regressivos SAP (ECC e S/4HANA). Apresentado formalmente para 4 Centros de Operação (COs) com 2 projetos já solicitados e em andamento.
+          </p>
+          <div class="ai-metric-highlight">
+            <strong>Ganhos de até 70% de Eficiência</strong>
+            <span>Automação completa na geração e execução de casos de teste SAP.</span>
+          </div>
+        </div>
+
+        <!-- Case 3: MAPPS Contingência -->
+        <div class="ai-case-card">
+          <span class="ai-badge">MAPPS • Modern Apps</span>
+          <h3 class="ai-case-title">Framework Generativo no Projeto Contingência CPFL</h3>
+          <p class="ai-case-desc">
+            Aplicações críticas desenvolvidas em tempo recorde para sustentar as operações da CPFL durante o período de transição e indisponibilidade do SAP, elogiadas publicamente pela diretoria do cliente.
+          </p>
+          <div class="ai-metric-highlight">
+            <strong>Margem de 32,3% (+10 pp vs. Meta)</strong>
+            <span>Entrega antecipada sem qualquer incidente de faturamento.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIDERANÇA EXECUTIVA ==================== -->
+  <section class="section-pillars" id="lideranca">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capacidade Operacional</span>
+        <h2 class="section-title">Estrutura de Liderança Executiva</h2>
+        <p class="section-subtitle">
+          Profissionais maduros, experientes e dedicados ao setor elétrico, com autonomia de ponta a ponta na gestão técnica, operacional e financeira.
+        </p>
+      </div>
+
+      <div class="leaders-grid">
+        <!-- Gustavo Berbert -->
+        <div class="leader-card">
+          <div class="leader-photo">GB</div>
+          <h4 class="leader-name">Gustavo Costa Berbert</h4>
+          <span class="leader-role">Diretor de Application Services</span>
+          <p class="leader-bio">
+            Assumiu a gestão unificada de AS (EAPPS, MAPPS e QS) no Q3/Q4 de FY25. Liderou a recuperação de confiança da CPFL, a estabilização de EDP e a industrialização dos frameworks de IA.
+          </p>
+        </div>
+
+        <!-- Daniella Cergole -->
+        <div class="leader-card">
+          <div class="leader-photo">DC</div>
+          <h4 class="leader-name">Daniella Cergole Benjamin</h4>
+          <span class="leader-role">Líder EAPPS & Estratégia Setorial</span>
+          <p class="leader-bio">
+            Executiva com altíssima eficiência em governança financeira e controle de P&L. Lidera as operações de sustentação em EDP, ENEVA e Aegea, mantendo visão cross-setorial estratégica.
+          </p>
+        </div>
+
+        <!-- Renato Honorio -->
+        <div class="leader-card">
+          <div class="leader-photo">RH</div>
+          <h4 class="leader-name">Renato Honório Nascimento</h4>
+          <span class="leader-role">Executivo Dedicado EAPPS CPFL</span>
+          <p class="leader-bio">
+            Novo executivo trazido estrategicamente para liderar a sustentação na CPFL em primeira pessoa. Responsável direto pelo restabelecimento da confiança e satisfação máxima do cliente.
+          </p>
+        </div>
+
+        <!-- William Amaral -->
+        <div class="leader-card">
+          <div class="leader-photo">WA</div>
+          <h4 class="leader-name">William Amaral Silva</h4>
+          <span class="leader-role">Executivo Responsável MAPPS</span>
+          <p class="leader-bio">
+            Executivo maduro e de longo relacionamento no setor elétrico. Líder da entrega do contingência CPFL e da blindagem da rentabilidade de Modern Applications acima de 30%.
+          </p>
+        </div>
+
+        <!-- Adilson Ferreira -->
+        <div class="leader-card">
+          <div class="leader-photo" style="background: linear-gradient(135deg, #065f46, var(--success));">AF</div>
+          <h4 class="leader-name">Adilson Ferreira</h4>
+          <span class="leader-role">Executivo Responsável QS</span>
+          <p class="leader-bio">
+            Protagonista do crescimento e rentabilidade (33,8%) de Quality Services. Criador do Framework de QA para SAP com IA e líder de projetos elogiados em Equatorial e CPFL.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PIPELINE COMERCIAL & 2027 ==================== -->
+  <section id="pipeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Aceleração Comercial</span>
+        <h2 class="section-title">Pipeline Comercial & A Ponte Estratégica para 2027</h2>
+        <p class="section-subtitle">
+          R$ 20,5M em pipeline ponderado no H2 (R$ 39,3M nominal) e base de propostas na mesa superior a R$ 50M para capturar a abertura do mercado livre.
+        </p>
+      </div>
+
+      <div class="pipe-cards-grid">
+        <div class="finance-stat-card blue-border">
+          <div class="fsc-label">Pipeline H2 Nominal</div>
+          <div class="fsc-value">R$ 39,25 M</div>
+          <span class="fsc-badge badge-blue">EAPPS + MAPPS + QS</span>
+        </div>
+
+        <div class="finance-stat-card cyan-border">
+          <div class="fsc-label">Pipeline H2 Ponderado</div>
+          <div class="fsc-value">R$ 20,50 M</div>
+          <span class="fsc-badge badge-blue">Critério Conservador</span>
+        </div>
+
+        <div class="finance-stat-card success-border">
+          <div class="fsc-label">Propostas Globais na Mesa</div>
+          <div class="fsc-value">&gt; R$ 50 M</div>
+          <span class="fsc-badge badge-green">Win Rate 30% a 40%</span>
+        </div>
+
+        <div class="finance-stat-card purple-border">
+          <div class="fsc-label">Boom Regulatório 2027</div>
+          <div class="fsc-value">Alta Demanda</div>
+          <span class="fsc-badge badge-green">Consultoria Homologada</span>
+        </div>
+      </div>
+
+      <div class="content-card" style="background: linear-gradient(135deg, #f8fafc, #ffffff); border: 2px solid var(--border-glow); padding: 30px; border-radius: var(--radius-md);">
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--text-dark);">⚡ A Tese Estratégica do Rush Regulatório de 2027</h3>
+        <p style="font-size: 0.95rem; color: var(--text-body); line-height: 1.6;">
+          Ao concentrarem o início efetivo das operações de abertura de mercado em janeiro de 2027 (Q4 do nosso ano fiscal FY26), as distribuidoras de energia geraram um represamento temporário no Q2 de 2026, mas criarão uma corrida massiva por contratações nos próximos meses. Com nossas três foundations consolidadas, framework de IA operando e histórico impecável na CPFL e Neoenergia, estamos posicionados como a consultoria preferencial para capturar essas demandas com margens superiores.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ E ESCLARECIMENTOS ESTRATÉGICOS ==================== -->
+  <section class="section-pillars" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Governança & FAQ Executivo</span>
+        <h2 class="section-title">Esclarecimentos Estratégicos aos Principais Temas</h2>
+        <p class="section-subtitle">
+          Respostas objetivas e fundamentadas aos pontos de atenção colocados pela banca e pelo comitê executivo.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>1. Como se deu a transição e recuperação operacional de EAPPS a partir de Dezembro/25?</span>
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            A frente de EAPPS não estava sob minha responsabilidade no início do ciclo anterior. Assumi a gestão no final do Q3 de 2025 diante de um cenário com forte desgaste no cliente CPFL e vulnerabilidade operacional. Dediquei o Q4/25 inteiramente à estabilização de contratos e recuperação de confiança. No início de FY26, reorganizei a estrutura trazendo o executivo Renato Honório com dedicação exclusiva à CPFL e promovendo a movimentação estratégica de Daniella Cergole para gerir as sustentações de EDP, ENEVA e Aegea mantendo o controle financeiro setorial. O resultado foi a estabilização completa da conta e elogios formais explícitos da diretoria da CPFL.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>2. Qual foi o diagnóstico e o plano de ação adotado para os desafios da conta EDP?</span>
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            A EDP apresentou múltiplos desafios exógenos: tratava-se de um cliente relativamente novo com histórico de poucos contratos no ano anterior. Enfrentamos a saída do executivo Formiga no ano passado, o que desfalcou o conhecimento técnico especializado em OutSystems e impactou diretamente projetos de Modern Applications. Além disso, o contrato de sustentação foi estruturado globalmente por Portugal, exigindo que o Brasil aceitasse decisões comerciais desafiadoras para proteger o contrato global, somado a limitações de processos internos da própria EDP. Essa situação foi enfrentada com liderança em primeira pessoa: alocamos Daniella Cergole à frente da conta, aplicamos ferramentas de IA para mapeamento de sistemas e reestruturamos a equipe, trazendo o contrato hoje para um estado de estabilidade e previsibilidade.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>3. De que forma a CPFL recuperou a confiança plena nas entregas de Application Services?</span>
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            A restauração da confiança ocorreu por meio de resultados concretos e presença executiva contínua. Em Modern Applications (MAPPS), entregamos o Projeto Contingência com excelência técnica absoluta para suportar a migração do SAP sem indisponibilidade para as distribuidoras. Em Quality Services (QS), tivemos atuação destacada no apoio ao projeto Siens. Em EAPPS, a presença dedicada de Renato Honório garantiu atendimento imediato às demandas diárias de sustentação, culminando em registros formais de agradecimento e áudio explícito de Rodrigo Relvas elogiando as melhorias alcançadas.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>4. Qual é o papel da Inteligência Artificial na sustentabilidade das margens de AS?</span>
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            A Inteligência Artificial em AS deixou de ser conceito para se tornar ferramenta de trabalho diária de nossas equipes executivas e técnicas. Fomos pioneiros em imersão de IA para sustentação: criamos frameworks para sistemas Brownfield (legados) em EAPPS, frameworks de testes SAP 100% automatizados com até 70% de eficiência em QS e frameworks de geração de código em MAPPS. Isso compensou os impactos de inflação de mão de obra e concorrência predatória, permitindo entregar margens consolidadas de 28,32% em AS (com MAPPS em 30,8% e QS em 33,8%).
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>5. Como está calibrada a previsão de conversão para o pipeline de AS no H2?</span>
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-body">
+            O pipeline ativo para o segundo semestre atinge R$ 39,25 milhões nominais, que correspondem a R$ 20,50 milhões ponderados sob critérios conservadores de probabilidade. Além disso, possuímos propostas ativas em negociação que superam R$ 50 milhões no mercado elétrico. Com nosso win rate histórico estabilizado entre 30% e 40%, temos segurança de cumprir as metas de tração para o H2 e capturar com força os contratos da virada regulatória de 2027.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AUTOAVALIAÇÃO DO DIRETOR (TRAY MODAL) ==================== -->
+  <div class="presenter-tray-btn" id="btn-open-tray" title="Abrir Autoavaliação do Diretor (Tecla A)">
+    <span>📝</span> Autoavaliação do Diretor (<kbd>A</kbd>)
+  </div>
+
+  <div class="tray-modal-backdrop" id="tray-modal">
+    <div class="tray-modal-window">
+      <div class="tray-modal-header">
+        <div>
+          <h3 style="font-size:1.35rem; color:white; margin-bottom:4px;">Autoavaliação de Desempenho (H1 FY26)</h3>
+          <span style="font-size:0.82rem; color:var(--ntt-cyan); font-weight:700; text-transform:uppercase;">
+            Gustavo Costa Berbert • Diretor de Application Services (AS) • Utilities & Energy Brasil
+          </span>
+        </div>
+        <button class="tray-modal-close" id="btn-close-tray" title="Fechar">✕</button>
+      </div>
+
+      <div class="tray-modal-body">
+        <!-- Dimensão 1 -->
+        <div style="background: rgba(255,255,255,0.04); border-left: 3px solid var(--success); padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <strong style="font-size:0.95rem; color:white;">1. Disciplina Financeira, Margem & Gestão Consolidada</strong>
+            <span style="background:rgba(16,185,129,0.2); color:#34d399; font-size:0.72rem; font-weight:700; padding:2px 10px; border-radius:999px;">SUPERADO</span>
+          </div>
+          <p style="font-size:0.88rem; color:rgba(255,255,255,0.85); line-height:1.6;">
+            Assumindo a gestão integrada de AS em um ciclo de recuperação complexa, priorizei a blindagem da saúde financeira do P&L. Entregamos <strong>R$ 23,40M em receita bruta no H1</strong> (com 83,7% já realizado) e <strong>Margem de Contribuição de 28,32% (R$ 6,63M)</strong>, com destaque para a superação de meta em <strong>MAPPS (30,80%)</strong> e a excelente rentabilidade de <strong>QS (33,82%)</strong>. Mantivemos rígido controle de apontamentos no SAP e governança de GECO em todas as frentes.
+          </p>
+        </div>
+
+        <!-- Dimensão 2 -->
+        <div style="background: rgba(255,255,255,0.04); border-left: 3px solid var(--ntt-cyan); padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <strong style="font-size:0.95rem; color:white;">2. Inovação Operacional & Imersão de IA nas 3 Foundations</strong>
+            <span style="background:rgba(0,192,243,0.2); color:var(--ntt-cyan); font-size:0.72rem; font-weight:700; padding:2px 10px; border-radius:999px;">SUPERADO</span>
+          </div>
+          <p style="font-size:0.88rem; color:rgba(255,255,255,0.85); line-height:1.6;">
+            Fomos pioneiros nacionais no desenvolvimento de modelos de imersão de IA específicos para equipes de sustentação e garantia da qualidade. Implementamos o <strong>Framework Brownfields em EAPPS</strong> para documentação e manutenção de legados, o <strong>Framework de QA SAP 100% automatizado em QS</strong> (ganhos de até 70% de eficiência, apresentado a 4 COs) e o case <strong>Contingência na CPFL em MAPPS</strong>, garantindo entregas sem fricção e redução substancial de esforço.
+          </p>
+        </div>
+
+        <!-- Dimensão 3 -->
+        <div style="background: rgba(255,255,255,0.04); border-left: 3px solid #818cf8; padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <strong style="font-size:0.95rem; color:white;">3. Turnaround Operacional, Governança & Reorganização da Equipe</strong>
+            <span style="background:rgba(99,102,241,0.2); color:#a5b4fc; font-size:0.72rem; font-weight:700; padding:2px 10px; border-radius:999px;">ATINGIDO</span>
+          </div>
+          <p style="font-size:0.88rem; color:rgba(255,255,255,0.85); line-height:1.6;">
+            Conduzi uma reorganização estratégica profunda da liderança: trouxe o executivo <strong>Renato Honório</strong> para foco exclusivo na CPFL (restaurando plenamente a confiança e gerando relatos formais de elogio do cliente), movi <strong>Daniella Cergole</strong> para a liderança estratégica das sustentações em EDP, ENEVA e Aegea mantendo a governança financeira setorial, sustentei a maturidade de <strong>William Amaral</strong> em MAPPS e potencializei o protagonismo de <strong>Adilson Ferreira</strong> em QS. Treinamos nossas lideranças para atuação 100% funcional em rotinas executivas, MS Project, SAP e GECO.
+          </p>
+        </div>
+
+        <!-- Dimensão 4 -->
+        <div style="background: rgba(255,255,255,0.04); border-left: 3px solid var(--warning); padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <strong style="font-size:0.95rem; color:white;">4. Pipeline Comercial, Recuperação de Contas & Posicionamento 2027</strong>
+            <span style="background:rgba(245,158,11,0.2); color:#fbbf24; font-size:0.72rem; font-weight:700; padding:2px 10px; border-radius:999px;">ATINGIDO</span>
+          </div>
+          <p style="font-size:0.88rem; color:rgba(255,255,255,0.85); line-height:1.6;">
+            Estabilizamos a conta crítica da <strong>EDP</strong>, contornando as restrições do contrato global de Portugal e a transição de competência de OutSystems. Estruturei um <strong>pipeline de R$ 39,25M para o H2 (R$ 20,50M ponderado)</strong>, respaldado por mais de R$ 50M em propostas ativas no mercado. Estamos posicionados na dianteira para capitalizar a corrida de contratações das distribuidoras na abertura do mercado livre em 2027.
+          </p>
+        </div>
+
+        <!-- Compromissos H2 -->
+        <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.12); padding: 14px 18px; border-radius: 8px;">
+          <strong style="color: var(--ntt-cyan); font-size: 0.88rem; display: block; margin-bottom: 8px;">Compromissos Estratégicos para o H2 FY26:</strong>
+          <ul style="padding-left: 20px; font-size: 0.84rem; color: rgba(255,255,255,0.8); line-height: 1.6;">
+            <li>Acelerar a conversão do pipeline ponderado de R$ 20,5M de H2 nas três foundations;</li>
+            <li>Concluir o plano de normalização de margem do contrato EDP via esteira de automação com IA;</li>
+            <li>Escalar o Framework de IA para SAP QA em novos clientes (fechamento dos contratos solicitados);</li>
+            <li>Consolidar a liderança de Renato Honório na CPFL e expandir o cross-selling em Neoenergia e Enel;</li>
+            <li>Preparar capacidade e alocação das equipes para o salto de demanda regulatória de 2027.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER (NTT DATA STANDARD) ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>NTT DATA | Application Services</strong>
+          <p style="max-width: 380px; line-height: 1.6;">
+            Diretoria de Application Services para Utilities & Energy Brasil. Excelência em desenvolvimento de software moderno, sustentação de sistemas legados e qualidade automatizada por IA.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Foundations</h4>
+          <ul class="footer-links">
+            <li><a href="#foundations">EAPPS (Efficiency Apps)</a></li>
+            <li><a href="#foundations">MAPPS (Modern Apps)</a></li>
+            <li><a href="#foundations">QS (Quality Services)</a></li>
+            <li><a href="#lideranca">Estrutura Executiva</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Destaques H1</h4>
+          <ul class="footer-links">
+            <li><a href="#financeiro">DRE Consolidado: R$ 23,4M</a></li>
+            <li><a href="#financeiro">Margem CM: 28,32%</a></li>
+            <li><a href="#clientes">Recuperação CPFL & EDP</a></li>
+            <li><a href="#inovacao">Frameworks de IA Brownfield</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Aceleração</h4>
+          <ul class="footer-links">
+            <li><a href="#pipeline">Pipeline H2: R$ 20,5M Ponderado</a></li>
+            <li><a href="#pipeline">Propostas Globais &gt; R$ 50M</a></li>
+            <li><a href="#pipeline">Corrida Regulatória 2027</a></li>
+            <li><a href="#faq">Esclarecimentos ao Comitê</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 NTT DATA Brasil • Todos os direitos reservados. Material de uso executivo confidencial.
+        </div>
+        <div>
+          Diretoria de Utilities & Energy • Application Services
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CHART.JS LOGIC & SCRIPTS ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Chart Foundations
+      const ctxF = document.getElementById('chartFoundations');
+      if (ctxF) {
+        new Chart(ctxF, {
+          type: 'bar',
+          data: {
+            labels: ['EAPPS', 'MAPPS', 'QS', 'Total AS'],
+            datasets: [
+              {
+                label: 'Receita Bruta (R$ M)',
+                data: [12.52, 5.78, 5.09, 23.40],
+                backgroundColor: '#0066cc',
+                borderRadius: 4
+              },
+              {
+                label: 'Custos (R$ M)',
+                data: [8.26, 3.79, 2.76, 14.81],
+                backgroundColor: '#94a3b8',
+                borderRadius: 4
+              },
+              {
+                label: 'Margem CM (R$ M)',
+                data: [3.12, 1.78, 1.72, 6.63],
+                backgroundColor: '#10b981',
+                borderRadius: 4
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'bottom', labels: { boxWidth: 12, font: { family: 'Inter', size: 12 } } },
+              tooltip: {
+                callbacks: {
+                  label: function(c) {
+                    return c.dataset.label + ': R$ ' + c.raw.toFixed(2) + ' M';
+                  }
+                }
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  callback: function(v) { return 'R$ ' + v + 'M'; }
+                }
+              },
+              x: { grid: { display: false } }
+            }
+          }
+        });
+      }
+
+      // 2. Chart Share
+      const ctxS = document.getElementById('chartShare');
+      if (ctxS) {
+        new Chart(ctxS, {
+          type: 'doughnut',
+          data: {
+            labels: ['EAPPS (R$ 12,5M)', 'MAPPS (R$ 5,8M)', 'QS (R$ 5,1M)'],
+            datasets: [{
+              data: [53.53, 24.70, 21.77],
+              backgroundColor: ['#0066cc', '#00c0f3', '#10b981'],
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'bottom', labels: { boxWidth: 12, font: { family: 'Inter', size: 12 } } },
+              tooltip: {
+                callbacks: {
+                  label: function(c) {
+                    return ' ' + c.label + ': ' + c.raw.toFixed(1) + '%';
+                  }
+                }
+              }
+            }
+          }
+        });
+      }
+
+      // 3. Chart Monthly
+      const ctxM = document.getElementById('chartMonthly');
+      if (ctxM) {
+        new Chart(ctxM, {
+          type: 'line',
+          data: {
+            labels: ['Abr/26', 'Mai/26', 'Jun/26', 'Jul/26', 'Ago/26', 'Set/26 (Est)'],
+            datasets: [
+              {
+                label: 'Receita Bruta (R$ M)',
+                data: [4.13, 3.97, 4.15, 3.30, 4.04, 3.82],
+                borderColor: '#0066cc',
+                backgroundColor: 'rgba(0, 102, 204, 0.1)',
+                fill: true,
+                tension: 0.35,
+                yAxisID: 'y'
+              },
+              {
+                label: 'Margem CM (%)',
+                data: [40.7, 12.6, 32.6, 29.5, 28.3, 25.7],
+                borderColor: '#10b981',
+                borderDash: [5, 5],
+                pointBackgroundColor: '#10b981',
+                tension: 0.3,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'bottom', labels: { boxWidth: 12 } }
+            },
+            scales: {
+              y: {
+                type: 'linear',
+                position: 'left',
+                beginAtZero: true,
+                max: 5,
+                ticks: { callback: function(v) { return 'R$ ' + v + 'M'; } }
+              },
+              y1: {
+                type: 'linear',
+                position: 'right',
+                beginAtZero: true,
+                max: 50,
+                grid: { drawOnChartArea: false },
+                ticks: { callback: function(v) { return v + '%'; } }
+              }
+            }
+          }
+        });
+      }
+
+      // FAQ Accordion
+      document.querySelectorAll('.faq-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.parentElement;
+          const isActive = item.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+          if (!isActive) item.classList.add('active');
+        });
+      });
+
+      // Autoavaliação Modal
+      const modal = document.getElementById('tray-modal');
+      const btnOpen1 = document.getElementById('btn-open-tray');
+      const btnOpen2 = document.getElementById('btn-open-tray-header');
+      const btnClose = document.getElementById('btn-close-tray');
+
+      function openModal() {
+        if (modal) modal.classList.add('open');
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove('open');
+      }
+
+      if (btnOpen1) btnOpen1.addEventListener('click', openModal);
+      if (btnOpen2) btnOpen2.addEventListener('click', openModal);
+      if (btnClose) btnClose.addEventListener('click', closeModal);
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      // Keyboard Shortcut 'A' for Autoavaliação
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'a' || e.key === 'A') {
+          if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+            if (modal.classList.contains('open')) closeModal();
+            else openModal();
+          }
+        }
+        if (e.key === 'Escape') closeModal();
+      });
+    });
+  </script>
+</body>
+</html>
