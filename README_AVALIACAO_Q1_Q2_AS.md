@@ -19,7 +19,7 @@ Este projeto é uma **cópia independente** do modelo visual corporativo, estrut
   * **EAPPS:** R$ 12,52 M em Receita (53,53% do total AS) • Margem CM de **24,95%** (R$ 3,12 M).
   * **MAPPS:** R$ 5,78 M em Receita (24,70% do total AS) • Margem CM de **30,80%** (R$ 1,78 M — superação do target).
   * **QS:** R$ 5,09 M em Receita (21,77% do total AS) • Margem CM de **33,82%** (R$ 1,72 M — alta rentabilidade).
-* **Pipeline Comercial H2:** **R$ 88,25 M** nominal (**R$ 20,50 M** ponderado sob critérios conservadores), com base de propostas ativas no mercado elétrico superior a **R$ 99 M** (incluindo a adição de **R$ 49 M do Projeto Petros**).
+* **Pipeline Comercial H2:** **R$ 88,25 M** nominal (**R$ 20,50 M** ponderado sob critérios conservadores), com expectativa de conversão histórica de **~R$ 26,5 M** (30% de win rate sobre o pipeline nominal).
 
 ---
 
