@@ -25,14 +25,21 @@ Este projeto é uma **cópia independente** do modelo visual corporativo, estrut
 
 ## 🚀 Principais Fatos & Destaques Operacionais
 
-1. **Turnaround e Recuperação de EAPPS:** Gestão assumida no final do Q3 de FY25 com foco em restabelecer a confiança no cliente âncora (CPFL) e estabilizar o contrato complexo da EDP.
-2. **Elogio Formal Registrado na CPFL:** Reconhecimento explícito em áudio de Rodrigo Relvas (Liderança de Sustentação CPFL) elogiando as melhorias operacionais sob a gestão de Renato Honório, além da entrega antecipada do projeto de Contingência SAP por MAPPS.
-3. **Estabilização da EDP:** Superação dos desafios do contrato global (Portugal), transição técnica de OutSystems e limitações de processos da concessionária, hoje sob controle firme da liderança de Daniella Cergole.
-4. **Pioneirismo em Inteligência Artificial:**
-   * **Framework Brownfields (EAPPS):** Automação de documentação técnica e engenharia reversa de sistemas legados.
+1. **Ciclo Histórico de Entregas na CPFL (> R$ 7,1M Entregues + R$ 1,1M em Novos Negócios):** Conclusão com sucesso de projetos de altíssima complexidade sob blend multidisciplinar integrado (**EAPPS, MAPPS, QS, DX, Salesforce e SAP**):
+   * **Projeto CNPJ:** R$ 5,756 M
+   * **Nova Marca:** R$ 665 K
+   * **Reforma Tributária:** R$ 760 K
+   * ➡️ **Resultado Direto:** Conquista imediata de **mais R$ 1,1 milhão em novos negócios** (iniciados em Set/25) garantindo a **continuidade do projeto SAPIENS** (*"Entrega gera confiança, confiança gera continuidade e continuidade gera novos negócios"*). Liderança orquestrada por Dani Benjamin, Carla Carbonara e Roberto Jun Ohara.
+2. **Conclusão com Maestria: Projeto Adequação de UCs (CPFL):**
+   * **Volume:** R$ 5,638 M em 14 meses de execução intensa, com mais de 20 profissionais dedicados.
+   * **Vanguarda no Setor:** Blindagem das operações e integrações com CCEE para a **Abertura do Mercado Livre de Energia**, posicionando a NTT DATA e a CPFL na vanguarda do setor elétrico nacional (apoio institucional do Setor, com Jorge Manoel).
+3. **Pioneirismo em Sistemas OT na ENEVA:** Início do primeiro trabalho de EAPPS atuando diretamente com sistemas de OT (Tecnologia Operacional / automação e telemetria de geração térmica), integrando chão de fábrica à TI corporativa e abrindo uma grande esteira comercial replicável para outras geradoras e transmissoras.
+4. **Workshop Immersion AI Adopt (Hub de Campinas - Dias 15 e 16):** Imersão presencial reunindo o time para disseminação de frameworks de IA focados em transformar como resolvemos incidentes, evoluímos sistemas e destravamos problemas com agilidade e menos retrabalho (parceria Thiara/People, Ju/Formar, Will, Berbert e Dani).
+5. **Turnaround e Recuperação de Contas:** Gestão assumida no final de FY25 revertendo crises, com elogio formal em áudio na CPFL (Rodrigo Relvas) e estabilização firme do contrato EDP sob comando de Daniella Cergole.
+6. **Frameworks de IA Operacional em Produção:**
+   * **Framework Brownfields (EAPPS):** Redução de 40% no tempo de documentação e engenharia reversa de legados.
    * **Framework de QA para SAP com IA (QS):** Automação de testes com ganhos de até **70% de eficiência**, apresentado para 4 COs (com 2 novos contratos em andamento).
-   * **Framework Generativo (MAPPS):** Aceleração de entregas protegendo margens acima de 30%.
-5. **Formação de Líderes 100% Funcionais:** Capacitação prática de coordenadores em SAP, governança de GECO, medição de físico-financeiro no MS Project e engenharia de propostas técnicas.
+   * **Framework Generativo (MAPPS):** Aceleração de entregas no contingência CPFL protegendo margem de 32,3%.
 
 ---
 
