@@ -33,10 +33,16 @@ Este projeto é uma **cópia independente** do modelo visual corporativo, estrut
 2. **Conclusão com Maestria: Projeto Adequação de UCs (CPFL):**
    * **Volume:** R$ 5,638 M em 14 meses de execução intensa, com mais de 20 profissionais dedicados.
    * **Vanguarda no Setor:** Blindagem das operações e integrações com CCEE para a **Abertura do Mercado Livre de Energia**, posicionando a NTT DATA e a CPFL na vanguarda do setor elétrico nacional (apoio institucional do Setor, com Jorge Manoel).
-3. **Pioneirismo em Sistemas OT na ENEVA:** Início do primeiro trabalho de EAPPS atuando diretamente com sistemas de OT (Tecnologia Operacional / automação e telemetria de geração térmica), integrando chão de fábrica à TI corporativa e abrindo uma grande esteira comercial replicável para outras geradoras e transmissoras.
-4. **Workshop Immersion AI Adopt (Hub de Campinas - Dias 15 e 16):** Imersão presencial reunindo o time para disseminação de frameworks de IA focados em transformar como resolvemos incidentes, evoluímos sistemas e destravamos problemas com agilidade e menos retrabalho (parceria Thiara/People, Ju/Formar, Will, Berbert e Dani).
-5. **Turnaround e Recuperação de Contas:** Gestão assumida no final de FY25 revertendo crises, com elogio formal em áudio na CPFL (Rodrigo Relvas) e estabilização firme do contrato EDP sob comando de Daniella Cergole.
-6. **Frameworks de IA Operacional em Produção:**
+3. **Case Contingência SAP — IA Generativa no SDLC (CPFL):**
+   * **Missão Crítica:** Sistema de failover de call center (14 canais integrados) em regime de alta pressão com tolerância zero a falhas durante indisponibilidade do SAP.
+   * **Resultados Auditados:** **-50% no time previsto** (3 FTE vs 6 FTE), **+40% de produtividade no desenvolvimento**, apenas **3% de densidade de defeitos** funcionais e **100% da entrega atingida** no prazo recorde de 7 meses.
+4. **Case Vertical Workflow Agent AI — Automação de Chamados AMS (CPFL):**
+   * **Operação em 10 Torres:** Integração de ITSMs (ServiceNow, Jira) a bases legadas, CODEX e SAP APIs para triagem e resolução autônoma em 6 etapas mantendo governança.
+   * **Resultados Fase 1 (Piloto em 2 Torres):** **-31% de chamados totais**, **+5% de aumento imediato na lucratividade** e alto potencial de escala para as outras 8 torres.
+5. **Pioneirismo em Sistemas OT na ENEVA:** Início do primeiro trabalho de EAPPS atuando diretamente com sistemas de OT (Tecnologia Operacional / automação e telemetria de geração térmica), integrando chão de fábrica à TI corporativa e abrindo uma grande esteira comercial replicável para outras geradoras e transmissoras.
+6. **Workshop Immersion AI Adopt (Hub de Campinas - Dias 15 e 16):** Imersão presencial reunindo o time para disseminação de frameworks de IA focados em transformar como resolvemos incidentes, evoluímos sistemas e destravamos problemas com agilidade e menos retrabalho (parceria Thiara/People, Ju/Formar, Will, Berbert e Dani).
+7. **Turnaround e Recuperação de Contas:** Gestão assumida no final de FY25 revertendo crises, com elogio formal em áudio na CPFL (Rodrigo Relvas) e estabilização firme do contrato EDP sob comando de Daniella Cergole.
+8. **Frameworks de IA Operacional em Produção:**
    * **Framework Brownfields (EAPPS):** Redução de 40% no tempo de documentação e engenharia reversa de legados.
    * **Framework de QA para SAP com IA (QS):** Automação de testes com ganhos de até **70% de eficiência**, apresentado para 4 COs (com 2 novos contratos em andamento).
    * **Framework Generativo (MAPPS):** Aceleração de entregas no contingência CPFL protegendo margem de 32,3%.

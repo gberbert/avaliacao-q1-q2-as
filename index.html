@@ -1091,6 +1091,40 @@
       letter-spacing: 0.03em;
     }
 
+    .cpfl-badge-purple {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+    }
+
+    .cpfl-badge-indigo {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+    }
+
+    .cpfl-metric-item.highlight-purple {
+      background: #faf5ff;
+      border-color: #e9d5ff;
+    }
+
+    .cpfl-metric-item.highlight-purple .cmi-val {
+      color: #6b21a8;
+    }
+
+    .cpfl-quote-banner.purple-tone {
+      border-left-color: #7c3aed;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(79, 70, 229, 0.08));
+    }
+
     .cpfl-badge-cyan {
       background: linear-gradient(135deg, #0284c7, var(--ntt-cyan));
       color: white;
@@ -2315,6 +2349,93 @@
             <strong>Liderança Impecável:</strong> Dani Benjamin, Carla Carbonara e Roberto Jun Ohara, com agradecimento especial ao Setor na pessoa de <strong>Jorge Manoel</strong> pela proximidade e parceria estratégica.
           </div>
         </div>
+
+        <!-- CPFL Marco 3: Case Contingência SAP (IA no SDLC) -->
+        <div class="cpfl-spotlight-card">
+          <div class="cpfl-card-header">
+            <span class="cpfl-badge-purple">🤖 CPFL • IA Generativa no SDLC</span>
+            <span class="cpfl-pill-sub">Legacy Modernization • SRE Observability</span>
+          </div>
+          <h3 class="cpfl-card-title">
+            Case Contingência SAP: IA Generativa como Acelerador do SDLC
+          </h3>
+          <p class="cpfl-card-text">
+            Construção de Sistema de Contingência de Missão Crítica (Call Center) em ambiente de alta pressão e tolerância zero a falhas, garantindo continuidade dos serviços nos <strong>14 canais de atendimento</strong> durante indisponibilidade do SAP:
+          </p>
+          <div class="cpfl-metrics-grid">
+            <div class="cpfl-metric-item highlight-purple">
+              <span class="cmi-label">Produtividade no Dev</span>
+              <span class="cmi-val">+40%</span>
+              <span class="cmi-tag">Aceleração com Copilotos</span>
+            </div>
+            <div class="cpfl-metric-item">
+              <span class="cmi-label">Dimensionamento Time</span>
+              <span class="cmi-val">-50% FTE</span>
+              <span class="cmi-tag">3 FTE de 6 Previstos</span>
+            </div>
+            <div class="cpfl-metric-item">
+              <span class="cmi-label">Densidade de Defeitos</span>
+              <span class="cmi-val">3%</span>
+              <span class="cmi-tag">Testes Funcionais & Caos</span>
+            </div>
+            <div class="cpfl-metric-item highlight">
+              <span class="cmi-label">Entrega Atingida</span>
+              <span class="cmi-val">100%</span>
+              <span class="cmi-tag">Prazo Recorde (7 meses)</span>
+            </div>
+          </div>
+          <div class="cpfl-quote-banner purple-tone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>"A camada transversal de IA (prompts, copilotos e testes de caos com dados sintéticos) reduziu tarefas repetitivas e acelerou decisões <strong>com modelo human-in-the-loop e governança técnica.</strong>"</span>
+          </div>
+          <div class="cpfl-card-footer">
+            <strong>Premissas & Escopo:</strong> 7 meses de prazo-alvo | 14 canais de atendimento integrados | Margem CM recorde de 32,3% (+10 pp vs. meta).
+          </div>
+        </div>
+
+        <!-- CPFL Marco 4: Case Vertical Workflow Agent AI para AMS -->
+        <div class="cpfl-spotlight-card">
+          <div class="cpfl-card-header">
+            <span class="cpfl-badge-indigo">⚡ CPFL • Vertical Workflow Agent AI</span>
+            <span class="cpfl-pill-sub">SRE Observability • Data Application</span>
+          </div>
+          <h3 class="cpfl-card-title">
+            Workflow Agent AI: Automação Inteligente de Chamados AMS
+          </h3>
+          <p class="cpfl-card-text">
+            Redução drástica do volume de chamados manuais na operação de sustentação AMS distribuída em 10 torres, integrando ITSMs corporativos aos bancos de dados de legados e APIs do SAP sem perder governança:
+          </p>
+          <div class="cpfl-metrics-grid">
+            <div class="cpfl-metric-item highlight-cyan">
+              <span class="cmi-label">Redução de Chamados</span>
+              <span class="cmi-val">-31%</span>
+              <span class="cmi-tag">Chamados Totais (Fase 1)</span>
+            </div>
+            <div class="cpfl-metric-item highlight">
+              <span class="cmi-label">Lucratividade Operação</span>
+              <span class="cmi-val">+5%</span>
+              <span class="cmi-tag">Ganhos Diretos na Margem</span>
+            </div>
+            <div class="cpfl-metric-item">
+              <span class="cmi-label">Torres Piloto</span>
+              <span class="cmi-val">2 de 10</span>
+              <span class="cmi-tag">Escala nas 8 Restantes</span>
+            </div>
+            <div class="cpfl-metric-item">
+              <span class="cmi-label">Fontes Integradas</span>
+              <span class="cmi-val">6 Sistemas</span>
+              <span class="cmi-tag">Jira, ServiceNow, SAP & Oracle</span>
+            </div>
+          </div>
+          <div class="cpfl-quote-banner cyan-tone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>"Fluxo autônomo em 6 etapas com análise semântica via CODEX: leitura no ITSM, categorização, enriquecimento em legados e resolução direta mantendo rastreabilidade."</span>
+          </div>
+          <div class="cpfl-card-footer">
+            <strong>Evolução Estratégica:</strong> Ganho comprovado na cobertura piloto de 2 torres, apontando potencial de escala acelerada e alavancagem de rentabilidade para as 8 torres seguintes.
+          </div>
+        </div>
+
       </div>
 
       <div class="clients-grid">
